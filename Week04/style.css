@@ -1,0 +1,101 @@
+/* 基礎設定與盒模型 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #243447;
+  background-color: #f4f7fb;
+  font-family: Arial, "Microsoft JhengHei", sans-serif;
+  line-height: 1.6;
+}
+
+/* 頁首與頁尾背景色 */
+header, footer {
+  padding: 24px;
+  color: white;
+  text-align: center;
+  background-color: #234e70;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* 主要內容區塊 */
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  color: #234e70;
+  border-bottom: 2px solid #dbeafe;
+  padding-bottom: 8px;
+}
+
+/* 圖片設定：最大寬度與圓角 */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 16px 0;
+}
+
+/* 表格樣式 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  text-align: left;
+}
+
+th {
+  background-color: #dbeafe;
+}
+
+/* 導覽列 Flexbox 排版 */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* RWD 媒體查詢：手機版面 */
+@media (max-width: 600px) {
+  header, footer {
+    padding: 16px;
+  }
+  
+  main {
+    width: 95%;
+    padding: 16px;
+  }
+  
+  /* 手機版導覽列改為垂直排列 */
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
